@@ -1,172 +1,289 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gerador de Senhas</title>
+    <meta
+        name="description"
+        content="Em busca da cidade perdida - uma aventura interativa de múltiplas escolhas."
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <title>Em busca da cidade perdida</title>
+
+    <!-- Fonte utilizada no projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <main>
+        <!-- PASSO 0 -->
+        <section class="passo ativo" id="passo-0">
+            <img
+                src="img/cenario-passo0.png"
+                alt="Biblioteca onde uma antiga carta sobre uma cidade perdida é encontrada"
+            >
 
-        <section class="conteudo">
+            <p>
+                Um dia desses, dentro de um livro da biblioteca da escola,
+                eu descobri uma carta antiga sobre uma cidade perdida,
+                escondida por riquezas e belezas naturais. Nessa carta,
+                a autora deixa algumas pistas para encontrar essa cidade
+                e eu decidi segui-las!
+            </p>
 
-            <div class="titulo">
-                <div class="cadeado">🔒</div>
+            <div class="opcoes">
+                <button class="btn-proximo" data-proximo="1">
+                    Rio de Janeiro
+                </button>
 
-                <h1>Gerador de senhas</h1>
-
-                <p>Gere instantaneamente uma senha aleatória e segura</p>
+                <button class="btn-proximo" data-proximo="2">
+                    Pernambuco
+                </button>
             </div>
-
-            <div class="conteudo-senha">
-
-                <h3>Senha</h3>
-
-                <input
-                    name="senha"
-                    type="text"
-                    id="campo-senha"
-                    readonly
-                >
-
-            </div>
-
-            <div class="parametros">
-
-                <h2>Personalize sua senha</h2>
-
-                <!-- NÚMERO DE CARACTERES -->
-                <div class="parametro-senha">
-
-                    <h4 class="parametro-senha__titulo">
-                        Número de caracteres
-                    </h4>
-
-                    <div class="parametro-senha-botoes">
-
-                        <button class="parametro-senha__botao">
-                            -
-                        </button>
-
-                        <p class="parametro-senha__texto">
-                            12
-                        </p>
-
-                        <button class="parametro-senha__botao">
-                            +
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARACTERÍSTICAS DA SENHA -->
-                <div class="parametro-senha">
-
-                    <h4 class="parametro-senha__titulo">
-                        Características da senha
-                    </h4>
-
-                    <div class="parametro-senha-checkbox">
-
-                        <input
-                            name="maiusculo"
-                            type="checkbox"
-                            class="checkbox"
-                            checked
-                        >
-
-                        <label for="maiusculo">
-                            Letras maiúsculas
-                        </label>
-
-                    </div>
-
-                    <div class="parametro-senha-checkbox">
-
-                        <input
-                            name="minusculo"
-                            type="checkbox"
-                            class="checkbox"
-                        >
-
-                        <label for="minusculo">
-                            Letras minúsculas
-                        </label>
-
-                    </div>
-
-                    <div class="parametro-senha-checkbox">
-
-                        <input
-                            name="numero"
-                            type="checkbox"
-                            class="checkbox"
-                        >
-
-                        <label for="numero">
-                            Números
-                        </label>
-
-                    </div>
-
-                    <div class="parametro-senha-checkbox">
-
-                        <input
-                            name="simbolo"
-                            type="checkbox"
-                            class="checkbox"
-                        >
-
-                        <label for="simbolo">
-                            Símbolos
-                        </label>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FORÇA DA SENHA -->
-                <div class="parametro-senha">
-
-                    <h4 class="parametro-senha__titulo">
-                        Força da senha
-                    </h4>
-
-                    <div class="barra">
-
-                        <div class="forca fraca"></div>
-
-                    </div>
-
-                    <div class="parametro-senha-textos">
-
-                        <p>Fraca</p>
-                        <p>Média</p>
-                        <p>Forte</p>
-
-                    </div>
-
-                    <p class="entropia"></p>
-
-                </div>
-
-            </div>
-
         </section>
 
+        <!-- PASSO 1 -->
+        <section class="passo" id="passo-1">
+            <img
+                src="img/cenario-passo1-rio.jpg"
+                alt="Pico da Tijuca no Rio de Janeiro"
+            >
+
+            <p>
+                Você começa sua jornada no Rio de Janeiro, subindo
+                o Pico da Tijuca ao amanhecer para encontrar a primeira pista.
+            </p>
+
+            <div class="opcoes">
+                <button class="btn-proximo" data-proximo="3">
+                    Procurar a pista no topo do pico
+                </button>
+
+                <button class="btn-proximo" data-proximo="4">
+                    Desistir e voltar para casa
+                </button>
+            </div>
+        </section>
+
+        <!-- PASSO 2 -->
+        <section class="passo" id="passo-2">
+            <img
+                src="img/cenario-passo2-pernambuco.jpg"
+                alt="Cidade histórica de Olinda em Pernambuco"
+            >
+
+            <p>
+                Em Pernambuco, você visita a histórica cidade de Olinda.
+                Na carta, uma das pistas indica que, para localizar a
+                entrada para a cidade perdida, você deve procurar a próxima
+                pista em um dos pontos turísticos da cidade.
+                Por qual você começa?
+            </p>
+
+            <div class="opcoes">
+                <button class="btn-proximo" data-proximo="5">
+                    Investigar as igrejas antigas
+                </button>
+
+                <button class="btn-proximo" data-proximo="6">
+                    Explorar as praias próximas
+                </button>
+            </div>
+        </section>
+
+        <!-- PASSO 3 -->
+        <section class="passo" id="passo-3">
+            <img
+                src="img/cenario-passo7-amazonas.jpg"
+                alt="Paisagem da floresta amazônica"
+            >
+
+            <p>
+                No topo do Pico da Tijuca, você encontra uma antiga
+                inscrição apontando que a próxima pista está localizada
+                no Amazonas.
+            </p>
+
+            <button class="btn-proximo" data-proximo="7">
+                Seguir para o Amazonas
+            </button>
+        </section>
+
+        <!-- PASSO 4 -->
+        <section class="passo" id="passo-4">
+            <img
+                src="img/cenario-passo4-voltar-casa.png"
+                alt="Pessoa voltando para casa após desistir da aventura"
+            >
+
+            <p>
+                Você decide que a aventura é grande demais e volta para casa,
+                mas sempre se pergunta o que teria encontrado.
+            </p>
+
+            <button class="btn-reiniciar" type="button">
+                Reiniciar aventura
+            </button>
+        </section>
+
+        <!-- PASSO 5 -->
+        <section class="passo" id="passo-5">
+            <img
+                src="img/cenario-passo5-igrejas.jpg"
+                alt="Igrejas históricas de Olinda"
+            >
+
+            <p>
+                Nas igrejas de Olinda, você descobre um mapa antigo
+                escondido atrás de um altar, apontando que a próxima
+                pista está no Amazonas.
+            </p>
+
+            <button class="btn-proximo" data-proximo="7">
+                Viajar para o Amazonas
+            </button>
+        </section>
+
+        <!-- PASSO 6 -->
+        <section class="passo" id="passo-6">
+            <img
+                src="img/cenario-passo6-praia.jpg"
+                alt="Praia de Pernambuco"
+            >
+
+            <p>
+                Explorando as praias, você encontra uma caverna escondida,
+                mas ela leva a um beco sem saída.
+            </p>
+
+            <button class="btn-proximo" data-proximo="8">
+                Voltar e explorar as igrejas
+            </button>
+        </section>
+
+        <!-- PASSO 7 -->
+        <section class="passo" id="passo-7">
+            <img
+                src="img/cenario-passo-7-amazonas.jpg"
+                alt="Rio cercado pela floresta amazônica"
+            >
+
+            <p>
+                No Amazonas, a busca pela cidade perdida se intensifica.
+                Você se depara com um rio bifurcado.
+            </p>
+
+            <div class="opcoes">
+                <button class="btn-proximo" data-proximo="9">
+                    Seguir pelo rio à esquerda
+                </button>
+
+                <button class="btn-proximo" data-proximo="10">
+                    Seguir pelo rio à direita
+                </button>
+            </div>
+        </section>
+
+        <!-- PASSO 8 -->
+        <section class="passo" id="passo-8">
+            <img
+                src="img/cenario-passo8-mapa.jpg"
+                alt="Mapa antigo encontrado durante a aventura"
+            >
+
+            <p>
+                De volta às igrejas, você finalmente encontra o mapa antigo.
+                Agora, para o Amazonas!
+            </p>
+
+            <button class="btn-proximo" data-proximo="7">
+                Seguir para o Amazonas
+            </button>
+        </section>
+
+        <!-- PASSO 9 -->
+        <section class="passo" id="passo-9">
+            <img
+                src="img/cenario-passo9-cachoeira.jpg"
+                alt="Cachoeira escondida com inscrições antigas"
+            >
+
+            <p>
+                O rio à esquerda leva você a uma cachoeira escondida
+                com inscrições antigas que revelam a entrada da cidade perdida.
+            </p>
+
+            <button class="btn-proximo" data-proximo="11">
+                Explorar a cidade perdida
+            </button>
+        </section>
+
+        <!-- PASSO 10 -->
+        <section class="passo" id="passo-10">
+            <img
+                src="img/cenario-passo10-pantano.jpg"
+                alt="Área pantanosa na floresta"
+            >
+
+            <p>
+                O rio à direita termina em uma área pantanosa.
+                Apesar de belas vistas, não há sinais da cidade perdida aqui.
+            </p>
+
+            <button class="btn-proximo" data-proximo="12">
+                Retornar e tentar o outro rio
+            </button>
+        </section>
+
+        <!-- PASSO 11 -->
+        <section class="passo" id="passo-11">
+            <img
+                src="img/cenario-passo11-cidade-perdida.png"
+                alt="Cidade perdida maravilhosa escondida no Amazonas"
+            >
+
+            <p>
+                Dentro da cidade perdida, você descobre tesouros inimagináveis
+                e decide se dedicar a estudar e preservar este lugar.
+            </p>
+
+            <button class="btn-reiniciar" type="button">
+                Jogar novamente
+            </button>
+        </section>
+
+        <!-- PASSO 12 -->
+        <section class="passo" id="passo-12">
+            <img
+                src="img/cenario-passo12-amazonas.jpg"
+                alt="Caminho de volta pelo rio na Amazônia"
+            >
+
+            <p>
+                Retornando e escolhendo o rio à esquerda, você finalmente
+                encontra a cachoeira escondida e as inscrições que levam
+                à cidade perdida.
+            </p>
+
+            <button class="btn-proximo" data-proximo="11">
+                Explorar a cidade perdida
+            </button>
+        </section>
     </main>
 
-    <script src="main.js"></script>
-
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
-
 </html>
+```
